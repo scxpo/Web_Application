@@ -1,0 +1,10 @@
+h1.title{
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+}
+
+.label{
+    text-align: center;
+    background: #c9c9c9;
+}

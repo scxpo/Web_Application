@@ -92,4 +92,4 @@ for (let i = 0; i < squadre.length; i++) {
     buffer += `    <h6>Nazione: ${squadre[i].nazione}</h6>`
     buffer += `</div>`
 }
-squadreID.innerHTML += buffer;
+squadreID.innerHTML += buffer + "<br>" + `<a href="products.html" class="btn btn-primary">Torna Indietro</a>`;

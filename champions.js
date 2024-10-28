@@ -221,21 +221,8 @@ let squadre = [
 ]
 
 
-
-
-// let buffer = "";
-
 let squadreID = document.getElementById("squadre");
 squadreID.innerHTML = "";
-
-// for (let i = 0; i < squadre.length; i++) {
-//     buffer += `<div class="col-4">`
-//     buffer += `<br>`
-//     buffer += `    <h4><span class="bold">${squadre[i].nome}</span></h4>`
-//     buffer += `    <h6>Nazione: ${squadre[i].nazione}</h6>`
-//     buffer += `</div>`
-// }
-// squadreID.innerHTML += buffer + "<br>" + `<a href="products.html" class="btn btn-primary">Torna Indietro</a>`;
 
 
 let buffer = `<div class="container"><div class="row">`;
@@ -265,14 +252,12 @@ function mostraDettagli(index) {
         .map(([titolo, numero]) => `${titolo}: ${numero}`)
         .join(', ');
 
-    // Popola il modal con i dettagli della squadra
     document.getElementById('modalNome').textContent = squadra.nome;
     document.getElementById('modalDescrizione').textContent = squadra.descrizione;
     document.getElementById('modalFondazione').textContent = squadra.fondazione;
     document.getElementById('modalStadio').textContent = squadra.stadio;
     document.getElementById('modalTitoli').textContent = titoliVinti;
 
-    // Mostra il modal
     document.getElementById('detailModal').style.display = "block";
 }
 
@@ -280,7 +265,6 @@ function chiudiModal() {
     document.getElementById('detailModal').style.display = "none";
 }
 
-// Chiudere il modal se l'utente clicca al di fuori del contenuto del modal
 window.onclick = function(event) {
     const modal = document.getElementById('detailModal');
     if (event.target == modal) {
@@ -289,18 +273,3 @@ window.onclick = function(event) {
 }
 
 mostraDettagli();
-
-
-
-
-
-// function mostraDettagli(index) {
-//     const squadra = squadre[index];
-//     const titoliVinti = Object.entries(squadra.titoli_vinti)
-//         .map(([titolo, numero]) => `${titolo}: ${numero}`)
-//         .join(', ');
-
-//     alert(`Nome: ${squadra.nome}\nNazione: ${squadra.nazione}\nFondazione: ${squadra.fondazione}\nStadio: ${squadra.stadio}\nTitoli vinti: ${titoliVinti}\nDescrizione: ${squadra.descrizione}`);
-// }
-
-// mostraDettagli();
